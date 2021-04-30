@@ -7,8 +7,7 @@
     <groupId>io.github.aland-1415</groupId>
     <artifactId>psc-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
-    <name>psc-parent</name>
+    <version>1.0-SNAPSHOT</version>
     <description>pick up shells in the sea of code</description>
     <url>https://github.com/aland-1415/psc-parent</url>
 
@@ -80,8 +79,6 @@
                             <useReleaseProfile>false</useReleaseProfile>
                             <releaseProfiles>release</releaseProfiles>
                             <goals>deploy</goals>
-                            <tagBase>http://192.168.1.103/app/tags/</tagBase>
-                            <branchBase>https://192.168.1.103/app/branches</branchBase>
                         </configuration>
                     </plugin>
                     <plugin>
@@ -98,7 +95,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.0</version>
+                        <version>1.5</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -128,11 +125,6 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>3.0.0</version>
-                        <configuration>
-                            <charset>UTF-8</charset>
-                            <encoding>UTF-8</encoding>
-                            <docencoding>UTF-8</docencoding>
-                        </configuration>
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>
